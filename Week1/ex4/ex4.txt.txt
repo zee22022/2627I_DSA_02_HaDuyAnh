@@ -1,0 +1,1 @@
+Ta thấy hiện tại 9->8 được một cây có kích thước 2 và gốc 8. Cây có thể đứng độc lập => giá trị là 8. Hoặc có thể nối với cây có kích thước lớn hơn bang 2 => nhận giá trị 0 hoặc 4. Các giá trị còn lại không thoả mãn do không phải gốc của cây có kích thước lớn hơn bang 2.

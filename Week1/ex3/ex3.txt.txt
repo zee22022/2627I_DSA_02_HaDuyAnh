@@ -1,0 +1,9 @@
+(0, 4): Tách ra ta thấy cây chứa 0 và cây chứa 4 đều có kích thước là 4. Khi thực hiện union(0 ,4) thì sẽ nối gốc của 4 với 0 mà trên hình vẽ thể hiện 0 nối với 4 => không thực hiện được.
+(2, 3): Không thực hiện được do khi tách ra ta thấy cây chứa 3 là cây size 1, cây chứa 2 là cây size 7 có gốc là 4, khi thực hiện union(2,3) thì 3 phải được nối với gốc của 2 là 4.
+(4, 0): Ngược lại với (0, 4) nên thực hiện được.
+(4, 5): Tách ra ta được cây chứa 5 có kích thước 2 và cây chứa 4 có kích thước 6. Thực hiện union(4, 5) sẽ nối gốc của cây chứ 5 với gốc của cây chứ 4 => thực hiện được.
+(5, 0): Có hai kiểu tách là xoá 0->4 và xoá 5->4. Xoá 0->4 thì ta quy về trường hợp union(4,0) => thực hiện được. Xoá 5-> 4 thì đc thấy cấy chứa 5 có kích thước 2 nhỏ hơn cây chứa 0 có kích thước 6 => thực hiện được.
+(5, 7): Giống trường hợp union(2, 3) => không thực hiện được.
+(6, 4): Tách ra ta được cây chứa 6 có kích thước 1 và cây chứa 4 có kích thước 7 gốc 4 => union(6, 4) sẽ nối 6->4 => Thực hiện được.
+(8, 9): Tách ra ta được 2 cây size 1. Theo quy tắc thì 9 sẽ được nối với 8 => thực hiện được.
+

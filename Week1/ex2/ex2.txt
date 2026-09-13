@@ -1,0 +1,13 @@
+a) Ban đầu có n tập hợp độc lập. Khi thực hiện các thao tác union(0, 1), union(0, 2), union(0, 3), ..., union(0, n-1) sẽ gộp n - 1 phần tử vào tập hợp ban đầu chứa 0 => có 1 thành phần liên thông.
+
+b) Ở mỗi lần thực hiện thao tác union() trong Quick-Find, ta cần phải cập nhật leader cho tất cả phần tử hiện đang có trong mảng, mà mỗi lần duyệt mảng sẽ tang them 1 phần tử => Tổng số lần cập nhật là : 1 + 2 + 3 + ... + n - 1 = n(n-1)/2 ~ n^2 / 2
+
+c) Trong cài đặt Quick-Union, sau mỗi lần duyệt ta nối root[p] vào root[q], khi kết thúc sẽ tạo thành cấu trúc danh sách liên kết nối từ 0 đến n - 1 với gốc n - 1. Khi gọi find(0) sẽ duyệt từ 0 đến gốc n - 1 => số lần thực hiện là n => O(N)
+
+d) Thiết lập Weighted Quick-Union:
+union(0, 1) : hai cây chứ 0 và 1 đều có size 1, với yêu cầu của đề bài ta sẽ tạo được cây mới {0,1} với gốc là 1.
+union(0, 2) : gộp cây size 1 chứa 2 vào gốc 1
+...
+union(0, n-1)
+
+Sau các bước ta se được một cây có gốc là 1 với các nút con 0,2,3,.. n-1. Khi gọi find(0) thì ta chỉ tốn một bước để gọi đến cha của nó là 1 => O(1)

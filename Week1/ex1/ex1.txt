@@ -1,0 +1,16 @@
+Ở cài đặt trên đã dính lỗi là thay đổi giá trị của leader trong lúc đang duyệt mảng. 
+Giả sử ta khởi tạo n = 3 và mảng N = [0,1,3,6], thực hiện hai thao tác union(0, 1) và union(0, 3).
+Sau bước union(0, 1), N = [1,1,3,6]. 
+Ở bước union(0, 3), khi i = 0, N = [3,1,3,6]. Khi i = 1, ta thấy 1 khác 3 nên N[1] vẫn giữ nguyên giá trị ban đầu trong khi chúng ta cần thay đổi giá trị của N[1] = 3 => chương trình sẽ trả về kết quả sai.
+Để sửa lỗi trên, chúng ta sẽ gán giá trị leader[p] cố định cho biến mới t và trong vòng lặp so sánh leader[i] với t rồi thực hiện gán.
+Code minh hoạ:
+
+public void union(int p, int q) {
+    int t = leader[p]; 
+    for (int i = 0; i < leader.length; i++) {
+        if (leader[i] == t) {
+            leader[i] = leader[q];
+        }
+    }
+}
+
