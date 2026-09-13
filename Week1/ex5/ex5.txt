@@ -1,1 +1,1 @@
-Nếu tách thành 2 cây có gốc 5 và gốc 0, ta thấy cây có gốc 0 đang có size là 6 trong khi cây chứ gốc 5 có size là 4 => nếu union(0, 5) thì 5 sẽ được nối vào 0, mà 5 đang là gốc của 0 theo giá trị hiện tại của mảng => mâu thuẫn => mảng không thể là một biểu diễn parent link.
+Nếu tách thành 2 cây có gốc 5 và gốc 0, ta thấy cây có gốc 0 đang có size là 7 trong khi cây chứ gốc 5 có size là 3 => nếu union(0, 5) thì 5 sẽ được nối vào 0, mà 5 đang là gốc của 0 theo giá trị hiện tại của mảng => mâu thuẫn => mảng không thể là một biểu diễn parent link.
