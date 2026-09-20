@@ -1,0 +1,4 @@
+Số lượng bộ 3 chọn từ n phần tử là:(n 3) = (n^3 - 3n^2 + 2n)/6
+Số phép so sánh được thực hiện (n 3) lần => chi phí xấp xỉ n^3/6
+Số phép cộng được thực hiện 2(n 3) => chi phí xấp xỉ n^3/3
+=> Tổng bậc tăng thời gian O(n^3)
